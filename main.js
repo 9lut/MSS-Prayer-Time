@@ -1,5 +1,5 @@
 async function getPrayerTimesForMonth(year, month) {
-    const response = await fetch(`http://api.aladhan.com/v1/calendarByAddress/${year}/${month}?address=Songkhla, Thailand`);
+    const response = await fetch(`https://api.aladhan.com/v1/calendarByAddress/${year}/${month}?address=Songkhla, Thailand`);
     const data = await response.json();
 
     function addFiveMinutes(timeStr) {
