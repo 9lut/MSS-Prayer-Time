@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>เวลาละหมาด</title>
-    <link rel="shortcut icon" type="image/x-icon" href="LOGO-MSS.png"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="LOGO-MSS.png" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
-<body onload="initializePage()">
+<body>
     <div class="container">
-        <img class="logo-mss" src="LOGO-MSS.png" alt="Logo"><br><br>
+        <img class="logo-mss" src="LOGO-MSS.png" alt="Logo" /><br /><br />
         <div class="title-time">
-            <div>ตารางเวลาละหมาดประจำเดือน <span id="monthName">January</span> ค.ศ. <span id="yearName">2024</span></div>
+            <div>
+                ตารางเวลาละหมาดประจำเดือน <span id="monthName">มกราคม</span> ค.ศ.
+                <span id="yearName">2024</span>
+            </div>
             <div>อ.หาดใหญ่ จ.สงขลา</div>
         </div>
         <form>
             <label for="year">ประจำปี</label>
-            <select id="year" onchange="updateTable()">
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-            </select>
+            <select id="year" onchange="updateTable()"></select>
+
             <label for="month">ประจำเดือน</label>
             <select id="month" onchange="updateTable()">
                 <option value="1">มกราคม</option>
@@ -41,6 +40,7 @@
                 <option value="12">ธันวาคม</option>
             </select>
         </form>
+
         <table id="prayerTimesTable">
             <thead>
                 <tr>
@@ -55,12 +55,12 @@
                     <th>อิชาอฺ</th>
                 </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody></tbody>
         </table>
+
         <div class="button-container">
-            <button onclick="downloadPDF()">ดาวน์โหลด PDF</button>
-            <button onclick="window.print()">พิมพ์</button>
+            <button type="button" onclick="downloadPDF()">ดาวน์โหลด PDF</button>
+            <button type="button" onclick="window.print()">พิมพ์</button>
         </div>
     </div>
 </body>
