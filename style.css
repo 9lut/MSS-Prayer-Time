@@ -95,6 +95,14 @@ td:nth-child(3) {
     /* หรือขนาดที่คุณต้องการ */
 }
 
+.title-ref {
+    display: none;
+}
+
+.title-MSS{
+    display: none;
+}
+
 /* Print styles */
 @media print {
     body {
@@ -121,6 +129,22 @@ td:nth-child(3) {
         font-size: 20px;
         margin-left: 30px;
         margin-bottom: 40px;
+    }
+
+    .title-ref {
+        display: block;
+        font-size: 15px;
+        justify-self: end;
+    }
+    
+    .title-MSS{
+        display: block ;
+        font-size: 20px;
+        border: #000;
+        justify-self: end;
+    }
+    button {
+        display: none;
     }
 
     form {
